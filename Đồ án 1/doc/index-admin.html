@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Tổng quan | Quản trị Admin</title>
+  <link rel="shortcut icon" type="image/png" href="/images/logo2.png"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Main CSS-->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- or -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <!-- Font-icon css-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+  <script src="https://kit.fontawesome.com/366619ab8f.js" crossorigin="anonymous"></script>
+  <!-- bootstrap -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
+</head>
+
+<body onload="time()" class="app sidebar-mini rtl">
+  <!-- Navbar-->
+  <header class="app-header">
+    <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
+      aria-label="Hide Sidebar"></a>
+    <!-- Navbar Right Menu-->
+    <ul class="app-nav">
+      <div class="app-nav-text"> 
+        <marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="5">Hi Khanh, welcome back. Have a good day!</marquee>
+      </div>
+  <!-- Ảnh avatar user -->
+    </div>
+      <div class="text-center">
+        <div class="btn-group">
+          <a class="btn btn-success dropdown-toggle" data-toggle="dropdown" ><img src="\images\Bản cuối.jpg" width="40px" class="rounded" alt="avatar">
+          </a>
+          <div class="dropdown-menu" >
+              <a class="dropdown-item" href="form-personal-information.html"><i class='bi bi-person-circle'></i> Thông tin cá nhân</a>
+              <a class="dropdown-item" href="form-personal-information.html"><i class="bi bi-key-fill"></i> Đổi mật khẩu</a>
+              <a class="dropdown-item" href="#"><i class="bi bi-gear-fill"></i> Cài đặt</a>
+              <a class="dropdown-item" href="/index.html"><i class="bi bi-box-arrow-right"></i> Đăng xuất</a>
+          </div>
+      </div>
+      </div>
+      <li><a class="app-nav__item" href="/index.html"><i class='bx bx-log-out bx-rotate-180'></i></a>
+      </li>
+    </ul>
+  </header>
+  <!-- Sidebar menu-->
+  <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+  <aside class="app-sidebar">
+    <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="\images\logo.jpg" width="60px"
+        alt="User Image">
+      <div>
+        <p class="app-sidebar__user-name"><b>QUẢN LÝ DOANH NGHIỆP</b></p>
+        <p class="app-sidebar__user-designation"></p>
+      </div>
+    </div>
+    <hr>
+    <ul class="app-menu">
+      <li><a class="app-menu__item active" href="index-admin.html"><i class='app-menu__icon bx bx-tachometer'></i><span
+            class="app-menu__label">Tổng quan</span></a></li>
+      <li><a class="app-menu__item " href="table-data-table.html"><i class='app-menu__icon bx bx-id-card'></i>
+          <span class="app-menu__label">Quản lý nhân viên</span></a></li>
+      <li><a class="app-menu__item " href="table-data-customer.html"><i class='app-menu__icon bx bx-user-voice'></i><span
+            class="app-menu__label">Quản lý khách hàng</span></a></li>
+      <li><a class="app-menu__item" href="table-data-product.html"><i
+            class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý sản phẩm</span></a>
+      </li>
+      <li><a class="app-menu__item" href="table-data-oder.html"><i class='app-menu__icon bx bx-task'></i><span
+            class="app-menu__label">Quản lý đơn hàng</span></a></li>
+      <li><a class="app-menu__item" href="table-data-report.html"><i
+            class='app-menu__icon bx bx-pie-chart-alt-2'></i><span class="app-menu__label">Báo cáo tài chính</span></a>
+      </li>
+      <li><a class="app-menu__item" href="form-personal-information.html"><i class="app-menu__icon bi bi-person-square"></i><span class="app-menu__label">Thông tin cá nhân</span></a></li>
+      </ul>
+    <!-- End Sidebar -->
+    <div class="footer">
+      <hr>
+      <a class="btn btn-address" type="button" href="https://icons.getbootstrap.com/icons/facebook/" title="Fanpage" onclick="myFunction(this)">
+      <i class="fa-brands fa-facebook"></i></a> 
+      <a class="btn btn-address" type="button" href="https://icons.getbootstrap.com/icons/facebook/" title="Fanpage" onclick="myFunction(this)">
+        <i class="fa-solid fa-envelope"></i></a> 
+        <a class="btn btn-address" type="button" href="https://icons.getbootstrap.com/icons/facebook/" title="Fanpage" onclick="myFunction(this)">
+        <i class="fa-brands fa-instagram"></i></a>
+        <a class="btn btn-address" type="button" href="https://icons.getbootstrap.com/icons/facebook/" title="Fanpage" onclick="myFunction(this)">
+          <i class="fa-brands fa-youtube"></i></a>
+        <br>
+        <div class="end-sidebar">
+          <i class="far fa-copyright" aria-hidden="true"> 2021 - 2022 Công ty Cổ phần Bán lẻ số 1 Việt Nam</p> </i>
+        </div>
+    </div>
+  </aside>
+  <main class="app-content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="app-title">
+          <ul class="app-breadcrumb breadcrumb">
+            <li class="breadcrumb-item"><a href="#"><b>Tổng quan</b></a></li>
+          </ul>
+          <div id="clock"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!--Left-->
+      <div class="col-md-12 col-lg-6">
+        <div class="row">
+       <!-- col-6 -->
+       <div class="col-md-6">
+        <div class="widget-small warning coloured-icon animation"><i class='icon bx bxs-user-account fa-3x'></i>
+          <div class="info">
+            <h4>Khách hàng</h4>
+            <p><b>56 khách hàng</b></p>
+            <p class="info-tong">Tổng số khách hàng được quản lý.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="widget-small primary coloured-icon animation"><i class='icon  bx bxs-user fa-3x'></i>
+            <div class="info">
+                <h4>Nhân viên</h4>
+                <p><b>26 nhân viên</b></p>
+                <p class="info-tong">Tổng số nhân viên hệ thống quản lý.</p>
+            </div>
+        </div>
+    </div>
+      <div class="col-md-6">
+        <div class="widget-small info coloured-icon animation"><i class='icon bx bxs-purchase-tag-alt fa-3x' ></i>
+            <div class="info">
+                <h4>Sản phẩm</h4>
+                <p><b>8580 sản phẩm</b></p>
+                <p class="info-tong">Số lượng sản phẩm kinh doanh.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <div class="widget-small warning coloured-icon animation"><i class='icon fa-3x bx bxs-chart' ></i>
+          <div class="info">
+              <h4>Doanh thu</h4>
+              <p><b>1.104.890.000 đ</b></p>
+              <p class="info-tong">Doanh thu tính đến thời điểm hiện tại</p>
+          </div>
+      </div>
+    </div>
+            <!-- / col-12 -->
+             <!-- col-12 -->
+
+             <!-- / col-12 -->
+        </div>
+      </div>
+      <!--END left-->
+      <!-- Right -->
+    <div class="col-md-12 col-lg-6">
+      <div class="row">
+          <div class="col-md-6">
+            <div class="widget-small danger coloured-icon animation"><i class='icon bx bxs-shopping-bags fa-3x'></i>
+              <div class="info">
+                <h4>Đơn hàng</h4>
+                <p><b>247 đơn hàng</b></p>
+                <p class="info-tong">Tổng số hóa đơn hàng đã bán.</p>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-6">
+          <div class="widget-small info coloured-icon animation"><i class='icon bx bxs-error-alt fa-3x'></i>
+            <div class="info">
+              <h4>Sắp hết hàng</h4>
+              <p><b>4 sản phẩm</b></p>
+              <p class="info-tong">Số sản phẩm cảnh báo hết cần nhập thêm.</p>
+            </div>
+          </div>
+         </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="widget-small primary coloured-icon animation"><i class='icon fa-3x bx bxs-receipt' ></i>
+            <div class="info">
+                <h4>Chờ xử lý</h4>
+                <p><b>2 đơn hàng</b></p>
+                <p class="info-tong">Các đơn hàng tồn đọng chưa xử lý.</p>
+            </div>
+        </div>
+    </div>
+        <div class="col-md-6">
+            <div class="widget-small danger coloured-icon animation"><i class='icon fa-3x bx bxs-receipt' ></i>
+                <div class="info">
+                    <h4>Đơn hàng hủy</h4>
+                    <p><b>2 đơn hàng</b></p>
+                    <p class="info-tong"> Các đơn hàng bị hủy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    
+      <!--END right-->
+      <div class="col-md-12 col-lg-6">
+        <div class="tile">
+            <h3 class="tile-title"><a href="table-data-oder.html">Tình trạng đơn hàng</a></h3>
+          <div>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>ID đơn hàng</th>
+                  <th>Tên khách hàng</th>
+                  <th>Tổng tiền</th>
+                  <th>Trạng thái</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>AL3947</td>
+                  <td>Phạm Thị Ngọc</td>
+                  <td>
+                    19.770.000 đ
+                  </td>
+                  <td><span class="badge bg-info">Chờ xử lý</span></td>
+                </tr>
+                <tr>
+                  <td>ER3835</td>
+                  <td>Nguyễn Thị Mỹ Yến</td>
+                  <td>
+                    16.770.000 đ	
+                  </td>
+                  <td><span class="badge bg-warning">Đang vận chuyển</span></td>
+                </tr>
+                <tr>
+                  <td>MD0837</td>
+                  <td>Triệu Thanh Phú</td>
+                  <td>
+                    9.400.000 đ	
+                  </td>
+                  <td><span class="badge bg-success">Đã hoàn thành</span></td>
+                </tr>
+                <tr>
+                  <td>MT9835</td>
+                  <td>Đặng Hoàng Phúc	</td>
+                  <td>
+                    40.650.000 đ	
+                  </td>
+                  <td><span class="badge bg-danger">Đã hủy</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- / div trống-->
+        </div>
+       </div>
+       <div class="col-md-12 col-lg-6">
+        <div class="tile">
+          <h3 class="tile-title"><a href="table-data-customer.html">Khách hàng mới</a></h3>
+        <div>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Tên khách hàng</th>
+                <th>Ngày sinh</th>
+                <th>Số điện thoại</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#183</td>
+                <td>Đỗ Thị Chinh</td>
+                <td>21/7/1992</td>
+                <td><span class="customer1">0921387221</span></td>
+              </tr>
+              <tr>
+                <td>#219</td>
+                <td>Hà Tuấn Hùng</td>
+                <td>30/4/1975</td>
+                <td><span class="customer2">0912376352</span></td>
+              </tr>
+              <tr>
+                <td>#627</td>
+                <td>Nguyễn Thị Minh Tâm</td>
+                <td>12/3/1999</td>
+                <td><span class="customer3">0128732665</span></td>
+              </tr>
+              <tr>
+                <td>#175</td>
+                <td>Nguyễn Lê Hiếu</td>
+                <td>4/12/2000</td>
+                <td><span class="customer4">0912376763</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+          <div class="tile">
+              <div>
+                  <h3 class="tile-title"><a href="table-data-product.html">Sản phẩm đã hết</a></h3>
+              </div>
+              <div class="tile-body">
+                  <table class="table table-hover table-bordered" id="sampleTable">
+                      <thead>
+                          <tr>
+                                  <th>Mã sản phẩm</th>
+                                  <th>Tên sản phẩm</th>
+                                  <th>Ảnh</th>
+                                  <th>Số lượng</th>
+                                  <th>Tình trạng</th>
+                                  <th>Giá tiền</th>
+                                  <th>Danh mục</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                                  <td>83826226</td>
+                                  <td>Macbook Pro 2017 13 inch Retina Cũ - Intel Core i7</td>
+                                  <td><img src="https://laptop88.vn/media/product/4614_macpro__2017_13_inch_4.jpg" alt="" width="100px;"></td>
+                                  <td>0</td>
+                                  <td><span class="badge bg-danger">Hết hàng</span></td>
+                                  <td>19.900.000 đ</td>
+                                  <td>Laptop</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <div class="tile">
+            <div>
+                <h3 class="tile-title"><a href="table-data-product.html">Sản phẩm bán chạy</a></h3>
+            </div>
+            <div class="tile-body">
+                <table class="table table-hover table-bordered" id="sampleTable">
+                    <thead>
+                        <tr>
+                            <th>Mã sản phẩm</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá tiền</th>
+                            <th>Số lượng</th>
+                            <th>Danh mục</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>71309005</td>
+                            <td>Laptop Lenovo Legion 5 15ARH05 82B500RRVN</td>
+                            <td>5.600.000 đ</td>
+                            <td>8</td>
+                            <td>Laptop</td>
+                        </tr>
+                        <tr>
+                            <td>61304005</td>
+                            <td>Laptop Gigabyte U4 UD 70S1823SO - Intel Core i7</td>
+                            <td>33.235.000 đ</td>
+                            <td>20</td>
+                            <td>Laptop</td>
+                        </tr>
+                        <tr>
+                            <td>62304003</td>
+                            <td>Laptop Acer Nitro 5 Tiger 2022 AN515-58-52SP</td>
+                            <td>3.800.000 đ</td>
+                            <td>15</td>
+                            <td>Laptop</td>
+                        </tr>
+                        <tr>
+                            <td>72638003</td>
+                            <td>Laptop ASUS TUF Gaming 2021 FX506HCB-HN144W</td>
+                            <td>2.450.000 đ</td>
+                            <td>8</td>
+                            <td>Laptop</td>
+                        </tr>
+                        <tr>
+                            <td>72109004</td>
+                            <td>Dell Gaming G15 5515-YJMK8</td>
+                            <td>21.550.000 đ</td>
+                            <td>17</td>
+                            <td>Laptop</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+  </main>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="js/popper.min.js"></script>
+  <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+  <!--===============================================================================================-->
+  <script src="js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="js/main.js"></script>
+  <!--===============================================================================================-->
+  <script src="js/plugins/pace.min.js"></script>
+  <!--===============================================================================================-->
+  <script type="text/javascript" src="js/plugins/chart.js"></script>
+  <!--===============================================================================================-->
+  <script type="text/javascript">
+    var data = {
+      labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6"],
+      datasets: [{
+        label: "Dữ liệu đầu tiên",
+        fillColor: "rgba(255, 213, 59, 0.767), 212, 59)",
+        strokeColor: "rgb(255, 212, 59)",
+        pointColor: "rgb(255, 212, 59)",
+        pointStrokeColor: "rgb(255, 212, 59)",
+        pointHighlightFill: "rgb(255, 212, 59)",
+        pointHighlightStroke: "rgb(255, 212, 59)",
+        data: [20, 59, 90, 51, 56, 100]
+      },
+      {
+        label: "Dữ liệu kế tiếp",
+        fillColor: "rgba(9, 109, 239, 0.651)  ",
+        pointColor: "rgb(9, 109, 239)",
+        strokeColor: "rgb(9, 109, 239)",
+        pointStrokeColor: "rgb(9, 109, 239)",
+        pointHighlightFill: "rgb(9, 109, 239)",
+        pointHighlightStroke: "rgb(9, 109, 239)",
+        data: [48, 48, 49, 39, 86, 10]
+      }
+      ]
+    };
+    var ctxl = $("#lineChartDemo").get(0).getContext("2d");
+    var lineChart = new Chart(ctxl).Line(data);
+
+    var ctxb = $("#barChartDemo").get(0).getContext("2d");
+    var barChart = new Chart(ctxb).Bar(data);
+  </script>
+  <script type="text/javascript">
+    //Thời Gian
+    function time() {
+      var today = new Date();
+      var weekday = new Array(7);
+      weekday[0] = "Chủ Nhật";
+      weekday[1] = "Thứ Hai";
+      weekday[2] = "Thứ Ba";
+      weekday[3] = "Thứ Tư";
+      weekday[4] = "Thứ Năm";
+      weekday[5] = "Thứ Sáu";
+      weekday[6] = "Thứ Bảy";
+      var day = weekday[today.getDay()];
+      var dd = today.getDate();
+      var mm = today.getMonth() + 1;
+      var yyyy = today.getFullYear();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      nowTime = h + " giờ " + m + " phút " + s + " giây";
+      if (dd < 10) {
+        dd = '0' + dd
+      }
+      if (mm < 10) {
+        mm = '0' + mm
+      }
+      today = day + ', ' + dd + '/' + mm + '/' + yyyy;
+      tmp = '<span class="date"> ' + today + ' - ' + nowTime +
+        '</span>';
+      document.getElementById("clock").innerHTML = tmp;
+      clocktime = setTimeout("time()", "1000", "Javascript");
+
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+    }
+  </script>
+</body>
+
+</html>
